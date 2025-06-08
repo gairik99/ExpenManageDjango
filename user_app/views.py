@@ -1,10 +1,14 @@
-from .serializers import RegisterSerializer
+from .serializers import RegisterSerializer, CustomTokenObtainPairSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
-from rest_framework.authtoken.models import Token
+# from rest_framework.authtoken.models import Token
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.views import TokenObtainPairView
 # Create your views here.
+
+
+
 @api_view(['POST'])
 def register(request):
     if request.method == 'POST':
@@ -18,3 +22,7 @@ def register(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     else:
         serializer = RegisterSerializer()
+        
+        
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
