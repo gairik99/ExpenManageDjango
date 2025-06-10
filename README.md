@@ -57,11 +57,11 @@ pip install -r requirements.txt
    ```
 
 ## Apply Migrations
--python manage.py makemigrations
--python manage.py migrate
+- python manage.py makemigrations
+- python manage.py migrate
 
 ## Run server locally
--python manage.py runserver
+- python manage.py runserver
 
 
 
