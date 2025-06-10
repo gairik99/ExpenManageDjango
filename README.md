@@ -53,4 +53,15 @@ pip install -r requirements.txt
    ```bash
    git clone https://github.com/yourusername/django-expense-app-backend.git
    cd django-expense-app-backend
-2.Add a setting.py 
+2.Add a setting.py
+3.pip install -r requirements.txt
+
+## Apply Migrations
+-python manage.py makemigrations
+-python manage.py migrate
+
+## Run server locally
+-python manage.py runserver
+
+
+
